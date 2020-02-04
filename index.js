@@ -21,8 +21,8 @@ function sortArray(arr, $d) {
   }
 }
 
-let arr = [1, 2, 3, 4, 5, 6, 7,9,-1];
-let d = 3;
+let arr = [1, 2, 3, 4, 5, 6, 7,9,-1, -505];
+let d = 2;
 rotateArray(arr, d);
 sortArray(arr, d);
 console.log(arr);
