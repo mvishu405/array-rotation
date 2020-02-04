@@ -10,23 +10,19 @@ function rotateArray(arr, d) {
 
 function sortArray(arr, $d) {
   for (let i = 0; i < arr.length - d; i++) {
-    for (let j = 0; j < arr.length - (d+i) - 1; j++) {
-      if(arr[j] < arr[j+1])
+    for (let j = i+1; j < arr.length - d; j++) {
+      if(arr[i] < arr[j])
       {
-        let temp = arr[j];
-        arr[j] = arr[j+1];
-        arr[j+1] = temp;
+        let temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
       }
     }
   }
 }
 
-let arr = [1, 2, 3, 4, 5, 6, 7];
-
-let d = 2;
-
+let arr = [1, 2, 3, 4, 5, 6, 7,9,-1];
+let d = 3;
 rotateArray(arr, d);
-
 sortArray(arr, d);
-
 console.log(arr);
